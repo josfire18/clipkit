@@ -1,0 +1,8 @@
+# Python
+.venv/
+__pycache__/
+
+# Secrets and local output
+.env
+bot.log
+out/
