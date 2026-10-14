@@ -1,8 +1,9 @@
 # Python
 .venv/
 __pycache__/
+*.egg-info/
+build/
 
 # Secrets and local output
 .env
-bot.log
 out/

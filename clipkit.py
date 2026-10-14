@@ -6,7 +6,7 @@ a Discord-soundboard-ready sound and a captioned GIF.
   python clipkit.py clip.mp4
 
 --phrase finds the words in the clip's speech and cuts around them.
-The Discord bot (bot.py) calls make_clip() from here.
+Other programs (e.g. the Rocko Discord bot) call make_clip() directly.
 """
 import argparse
 import difflib
@@ -47,7 +47,7 @@ def find_tool(name):
     for candidate in candidates:
         if candidate.exists():
             return str(candidate)
-    sys.exit(f"Can't find {name}. Install it with:  winget install Gyan.FFmpeg")
+    raise RuntimeError(f"Can't find {name}. Install ffmpeg (Windows: winget install Gyan.FFmpeg).")
 
 
 FFMPEG = find_tool("ffmpeg")

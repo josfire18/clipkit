@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clipkit"
+version = "0.1.0"
+description = "Turn a clip link into a Discord-soundboard-ready sound and a captioned GIF"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["yt-dlp", "faster-whisper", "numpy"]
+
+[project.scripts]
+clipkit = "clipkit:main"
+
+[project.urls]
+Source = "https://github.com/josfire18/clipkit"
+
+[tool.setuptools]
+py-modules = ["clipkit"]

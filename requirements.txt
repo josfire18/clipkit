@@ -1,4 +1,3 @@
 yt-dlp
 faster-whisper
 numpy
-discord.py>=2.5
