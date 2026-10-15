@@ -4,17 +4,24 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "clipkit"
-version = "0.1.0"
+version = "0.2.0"
 description = "Turn a clip link into a Discord-soundboard-ready sound and a captioned GIF"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["yt-dlp", "faster-whisper", "numpy"]
 
+[project.optional-dependencies]
+rocko = ["discord.py>=2.5"]
+
 [project.scripts]
 clipkit = "clipkit:main"
+
+# Lets the Rocko bot find /clip when installed with the [rocko] extra.
+[project.entry-points."rocko.addons"]
+clip = "rocko_clip"
 
 [project.urls]
 Source = "https://github.com/josfire18/clipkit"
 
 [tool.setuptools]
-py-modules = ["clipkit"]
+py-modules = ["clipkit", "rocko_clip"]
