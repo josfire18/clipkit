@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 dependencies = ["yt-dlp", "faster-whisper", "numpy"]
 
 [project.optional-dependencies]
-rocko = ["discord.py>=2.5"]
+rocko = ["discord.py>=2.7.1"]
 
 [project.scripts]
 clipkit = "clipkit:main"
