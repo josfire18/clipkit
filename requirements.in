@@ -1,0 +1,9 @@
+# Direct dependencies, unconstrained (the same list as pyproject.toml). requirements.txt is
+# compiled from this file and pins every package (direct and transitive) to an exact
+# version, so audits and Dependabot see real versions. After editing, regenerate with:
+#   pip install pip-tools
+#   pip-compile --strip-extras --no-emit-index-url --output-file=requirements.txt requirements.in
+# (Python 3.12 on Linux, the version the workflows use.)
+yt-dlp
+faster-whisper
+numpy
